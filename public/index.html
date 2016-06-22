@@ -17,15 +17,14 @@
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
   <link href="css/stylesheet.css" rel="stylesheet">
-
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="font-awesome/css/font-awesome-animation.min.css" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+  <link href="fonts/italics.css" rel="stylesheet" type="text/css">
+  <script src="https://use.fontawesome.com/1d2a8912b2.js"></script>
 </head>
 
-<body class="container">
+<body ng-controller="home" class="container">
 
   <!-- Navigation -->
   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -33,28 +32,50 @@
     <ul class="sidebar-nav">
       <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
       <li class="sidebar-brand">
-        <a href="#top"  onclick = $("#menu-close").click(); >Menu</a>
+        <a href="#top"  onclick = $("#menu-close").click();>Menu</a>
       </li>
       <li>
-        <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+        <a href="/#" onclick = $("#menu-close").click();><i class="fa-home menu-icon"></i><span class="menu-span">Home</span></a>
       </li>
       <li>
-        <a href="#about" onclick = $("#menu-close").click(); >About</a>
+        <a href="/#Services" onclick = $("#menu-close").click();><i class="fa-briefcase menu-icon"></i><span class="menu-span">Banking</span></a>
       </li>
       <li>
-        <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+        <a href="/#ProductDetails" onclick = $("#menu-close").click(); ><i class="fa-book menu-icon"></i><span class="menu-span">Checking Accounts</span></a>
       </li>
       <li>
-        <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+        <a href="/#CODS" onclick = $("#menu-close").click(); ><i class="fa-money menu-icon"></i><span class="menu-span">COD's</span></a>
       </li>
       <li>
-        <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+        <a href="/#CreditCards" onclick = $("#menu-close").click(); ><i class="fa-credit-card menu-icon"></i><span class="menu-span">Credit Cards</span></a>
+      </li>
+      <li>
+        <a href="/#Loans" onclick = $("#menu-close").click(); ><i class="fa-cart-plus menu-icon"></i><span class="menu-span">Loans</span></a>
+      </li>
+      <li>
+        <a href="/#Investments" onclick = $("#menu-close").click(); ><i class="fa-bullseye menu-icon"></i><span class="menu-span">Investments</span></a>
+      </li>
+      <li>
+        <a href="/#Insurance" onclick = $("#menu-close").click(); ><i class="fa-ambulance menu-icon"></i><span class="menu-span">Insurance</span></a>
+      </li>
+      <li>
+        <a href="/#SpecialOffers" onclick = $("#menu-close").click(); ><i class="fa-rocket menu-icon"></i><span class="menu-span">Special Offers</span></a>
+      </li>
+      <hr class="menu-line">
+      <li>
+        <a href="/#Loans" onclick = $("#menu-close").click(); ><img class="menu-img" src="img/chat.png"></i><span class="menu-span">Chat</span></a>
+      </li>
+      <li>
+        <a href="/#Investments" onclick = $("#menu-close").click(); ><img class="menu-img" src="img/findRate.png"></i><span class="menu-span">Find Rate</span></a>
+      </li>
+      <li>
+        <a href="/#Insurance" onclick = $("#menu-close").click(); ><img class="menu-img" src="img/CEO.png"></i><span class="menu-span">CEO Speaks<span></a>
+      </li>
+      <li>
+        <a href="/#SpecialOffers" onclick = $("#menu-close").click(); ><img class="menu-img" src="img/24_7.png"></i><span class="menu-span">24*7 Phone<span></a>
       </li>
     </ul>
   </nav>
-
-
-
 
   <!-- angular templating -->
   <!-- this is where content will be injected -->
@@ -66,7 +87,13 @@
 
   <!-- Bootstrap Core JavaScript -->
   <script src="../js/bootstrap.min.js"></script>
-
+  <!-- SPELLS -->
+  <!-- load angular and angular route via CDN -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/route.js"></script>
+  <script src="js/controller/homeController.js"></script>
+  <script src="js/signature.js"></script>
   <!-- Custom Theme JavaScript -->
   <script>
   // Closes the sidebar menu
@@ -80,19 +107,7 @@
     e.preventDefault();
     $("#sidebar-wrapper").toggleClass("active");
   });
-
-
   </script>
-
-
-  <!-- SPELLS -->
-  <!-- load angular and angular route via CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-  <script src="js/route.js"></script>
-  <script src="js/controller/homeController.js"></script>
-
-
 
 </body>
 </html>

@@ -12,13 +12,213 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
-  color: black
+  color: black;
 }
 
 .glow {
   text-shadow: 0px 0px 10px black;
- }
+}
 
 .glow:hover{
   text-shadow: 0px 0px 10px silver;
+}
+
+.formContainer{
+  position: fixed;
+  top: 25%;
+  left: 40%;
+  width:320px;
+  height: 400px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-border-radius: 8px/7px;
+  -moz-border-radius: 8px/7px;
+  border-radius: 8px/7px;
+  background-color: black;
+  opacity: 0.85;
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  border: solid 1px #cbc9c9;
+  overflow-y: scroll
+}
+
+.formContainer::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.formContainer::-webkit-scrollbar
+{
+  width: 6px;
+  background-color: red;
+}
+
+.formContainer::-webkit-scrollbar-thumb
+{
+  background-color: red;
+}
+
+.textbox {
+  position: relative;;
+  border: 1px solid #c4c4c4;
+  font-size: 13px;
+  width: 75%;
+  margin: 10px auto;
+  padding: 10px 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  background-color: #e6e6ff
+}
+
+.textbox:focus {
+  outline: none;
+  border: 1px solid #7bc1f7;
+  box-shadow: 0px 0px 8px #7bc1f7;
+  -moz-box-shadow: 0px 0px 8px #7bc1f7;
+  -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+.formTitle{
+  color: white
+}
+
+form.submitted .ng-invalid
+{
+  border:1px solid #f00;
+}
+
+.drop-Down{
+  height: 40px
+}
+
+#canvas{
+  width: 100%;
+  text-align: center;
+}
+
+#newSignature{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-top: 5px;
+  margin-left: -150px;
+  background-color: white !important
+}
+
+#buttonDIV , #finalDIV{
+  position: fixed;
+  margin-top: 5px;
+  bottom: 15%;
+  left: 50%;
+  margin-left: -65px;
+}
+
+#finalDIV{
+  position: fixed;
+  bottom: 5%;
+  margin-left: -150px;
+}
+
+.headerText{
+  top: 15%
+}
+
+.menu-line{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-icon{
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  height:15px;
+}
+
+.menu-span{
+  margin-left: 10px;
+}
+
+.menu-img{
+  height: 15px;
+}
+
+@media (min-width: 568px) {
+  .formContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:320px;
+    height: 300px;
+  }
+
+  #buttonDIV , #finalDIV{
+    position: fixed;
+    margin-top: 5px;
+    bottom: 15%;
+    left: 50%;
+    margin-left: -65px;
+  }
+
+  #finalDIV{
+    position: fixed;
+    bottom: 5%;
+    margin-left: -150px;
+  }
+
+  #newSignature{
+    top: 25%
+  }
+
+  .headerText{
+    top : 5%;
+  }
+
+}
+
+@media (max-width: 568px) {
+  .formContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:320px;
+    height: 350px;
+  }
+}
+
+@media (max-height: 500px) {
+  .formContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:320px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:450px;
+    height: 520px;
+  }
+}
+
+@media (min-height: 1024px) {
+  .formContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:450px;
+    height: 520px;
+  }
 }

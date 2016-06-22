@@ -1,0 +1,19 @@
+<main>
+  <div class="row">
+    <div>
+      <div class="text-vertical-center">
+        <h2><i class="fa fa-thumbs-up fa-1 fa-stack-1x text-primary headerText" aria-hidden="true">Verification Successful
+          <h4 class="text-primary">Kindly sign in the Box Below</h4></i></h2>
+      </div>
+      <div id="canvas">
+        <canvas class="roundCorners" id="newSignature"></canvas>
+        <div id="buttonDIV">
+          <button id="reset" type="button" class="btn btn-primary page-scroll" onclick="signatureClear()">Reset Signature</button>
+        </div>
+      </div>
+      <div id="finalDIV">
+        <button id="accept" type="button" class="btn btn-success page-scroll">Complete Application</button>
+        <button id="reject" type="button" class="btn btn-danger page-scroll">Reject Application</button>
+      </div>
+      <script>signatureCapture();</script>
+    </main>

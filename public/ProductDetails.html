@@ -1,6 +1,71 @@
+<main>
+  <div class="formContainer">
+    <form method="post" ng-class="{'submitted': submitted}">
+      <div>
+        <h1 class="formTitle">Personal Details</h1>
+        <hr class="small"/>
+      </div>
+      <div>
+        <div>
+          <input id="firstName" type="text" placeholder="Enter your First name" class="form-control textbox" oninvalid="this.setCustomValidity('Skadoosh! First Name is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="middleName" type="text" placeholder="Enter your Middle name" class="form-control textbox"/>
+          <input id="lastName" type="text" placeholder="Enter your Last name" class="form-control textbox" oninvalid="this.setCustomValidity('Skadoosh! Last Name is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="addressLine1" type="text" placeholder="Enter Address Line 1" class="form-control textbox" oninvalid="this.setCustomValidity('Aw Snap! Address Line 1 is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="addressLine2" type="text" placeholder="Enter Address Line 2" class="form-control textbox" oninvalid="this.setCustomValidity('Aw Snap! Address Line 2 is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="state" type="text" placeholder="Enter State" class="form-control textbox" oninvalid="this.setCustomValidity('Skadoosh! State is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="country" type="text" placeholder="Enter Country" class="form-control textbox" oninvalid="this.setCustomValidity('Skadoosh! Country is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="zipcode" type="text" placeholder="Enter ZIP Code" class="form-control textbox" oninvalid="this.setCustomValidity('Skadoosh! ZipCode is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="dateOfBirth" format="yyyy/mm/dd" placeholder="Enter Date of Birth" class="form-control textbox" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+          <input id="ssn" type="text" class="form-control textbox" ng-model="ssn" placeholder="Enter your Social Security Number" maxlength="11" >
+          <input id="dlNumber" type="text" placeholder="Enter Driving License Number" class="form-control textbox" oninvalid="this.setCustomValidity('Skadoosh! Driving License number is Required')"  oninput="setCustomValidity('')" required/>
+          <input id="emailID" type="email" placeholder="Enter E-Mail ID" class="form-control textbox"/>
+          <input id="mobileNumber" type="tel" class="form-control textbox" placeholder="Enter Mobile Number" maxlength="10"/>
+          <select id="employmentStatus"  type="text" class="form-control textbox drop-Down" data-toggle="dropdown">
+            <option id="e1" value="Employed">Employed</option>
+            <option id="e2" value="Unemployed">Unemployed</option>
+            <option id="e3" value="Student">Student</option>
+            <option id="e4" value="Retired">Retired</option>
+          </select>
+        </div>
 
-<div id="ProductDetails">
-  <form id="ProductDetails" method="post" ng-submit="saveQuestionPaper()">
-    
-  </form>
-</div>
+        <div class="modal-footer">
+          <button type="submit" ng-click="submitted= true;" class="btn btn-primary">Next</button>
+          <a href="/#signature">ndjkasd</a> 
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+
+  <script>
+  document.getElementById("ssn").onkeyup = function() {
+    var val = this.value.replace(/\D/g, '');
+    var newVal = '';
+
+    if(val.length > 4) {
+      this.value = val;
+    }
+
+    if((val.length > 3) && (val.length < 6)) {
+      newVal += val.substr(0, 3) + '-';
+      val = val.substr(3);
+    }
+
+    if (val.length > 5) {
+      newVal += val.substr(0, 3) + '-';
+      newVal += val.substr(3, 2) + '-';
+      val = val.substr(5);
+    }
+
+    newVal += val;
+    this.value = newVal;
+  };
+
+  document.getElementById("mobileNumber").onkeyup = function() {
+    this.value = this.value.replace(/\D/g, '');
+  }
+
+  </script>
+
+</main>
