@@ -1,0 +1,42 @@
+<main>
+  <form class="formContainer">
+
+    <form role="form">
+      <div>
+        <h1 class="formTitle">Funding Options</h1>
+        <hr/>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control textbox" id="amount" placeholder="$ Enter Amount To Fund">
+      </div>
+      <br>
+
+      <div >
+        <div class="fundcontent">Please select a payment option:
+          <br>
+          <br>
+
+          <input type="radio" name=fundingOption data-toggle="collapse" data-target="#demo"> Fund Later</input><br>
+          <input type="radio" name=fundingOption data-toggle="collapse" data-target="#demo"> Credit Card</input><br>
+          <input type="radio" name=fundingOption data-toggle="collapse" data-target="#demo"> Debit Card</input><br>
+          <input type="radio" name=fundingOption data-toggle="collapse" data-target="#demo"> Remote Check Deposit</input><br>
+          <center>
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo"><span class="servicedrop1 glyphicon glyphicon-chevron-right pull-right"></span>Fund Later</button>
+
+            <div id="demo" class="collapse addressDIV"><br>
+              <center>Please mail your check to:<br>
+                DAO Banking<br>
+                34/7 Highway Street<br>
+                Phoenix AX 85123<br>
+                USA<br>
+                or, deposit your check or cash at any of our branch.</center><br>
+                <div class="modal-footer">
+                  <button type="submit" ng-click="submitted= true;" class="btn btn-success">Finish</button>
+                </div>
+              </div>
+            </center>
+
+          </div>
+        </div>
+      </form>
+    </main>

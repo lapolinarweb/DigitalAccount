@@ -4,6 +4,7 @@ html{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
 }
 
 body{
@@ -13,6 +14,16 @@ body{
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: black;
+}
+
+.scrollText{
+  color: white;
+  font-size: 25px
+}
+
+.services{
+  background-color: #C0C0C0;
+  opacity: 0.95
 }
 
 .glow {
@@ -25,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .formContainer{
   position: fixed;
+  z-index: 999;
   top: 25%;
   left: 40%;
   width:320px;
@@ -63,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 .textbox {
   position: relative;;
   border: 1px solid #c4c4c4;
-  font-size: 13px;
+  font-size: 20px;
   width: 75%;
   margin: 10px auto;
   padding: 10px 10px;
@@ -94,7 +106,7 @@ form.submitted .ng-invalid
 }
 
 .drop-Down{
-  height: 40px
+  height: 46.5px
 }
 
 #canvas{
@@ -183,6 +195,12 @@ form.submitted .ng-invalid
 
 }
 
+/* all */
+::-webkit-input-placeholder { color:#000000 ; font-size: 15px}
+::-moz-placeholder { color:#000000; font-size: 15px} /* firefox 19+ */
+:-ms-input-placeholder { color:#000000; font-size: 15px} /* ie */
+input:-moz-placeholder { color:#000000; font-size: 15px}
+
 @media (max-width: 568px) {
   .formContainer{
     position: fixed;
@@ -221,4 +239,126 @@ form.submitted .ng-invalid
     width:450px;
     height: 520px;
   }
+}
+
+.error {
+    color: red;
+}
+
+.media-drop {
+    position: relative;
+}
+
+.media-drop > button.delete {
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+}
+
+.media-drop-placeholder {
+    display: table-cell;
+    background-color: #e1e1e8;
+    border: 3px solid #e1e1e8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .2);
+}
+
+.media-drop.dragover > .media-drop-placeholder {
+    border-color: orange;
+}
+
+.media-drop img {
+    border: 3px solid transparent;
+}
+
+.media-drop.dragover img {
+    border-color: orange;
+}
+
+.media-drop-placeholder.busyloading {
+    background-image: url(../img/ajax-loader.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.media-drop-placeholder-title {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    color: #818177;
+}
+
+.media-drop-placeholder-or {
+    display: block;
+    font-weight: normal;
+    font-size: 15px;
+    color: #818177;
+}
+
+.media-drop-placeholder-uploadbutton {
+    display: block;
+    position: relative;
+}
+
+/* Fake stylable upload button. */
+.media-drop-placeholder-uploadbutton > button {
+    position: relative;
+    width: 130px;
+}
+
+/* Real upload button, centered */
+.media-drop-placeholder-uploadbutton > input {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+    width: 130px;
+    max-width: 130px;
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .2);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.addressDIV{
+  position: relative;
+  padding-left:30px 0;
+  color:white;
+  font-family:segoe UI;
+  font-size:18px;
+  border-radius:3px;
+  width:250px;
+}
+
+.fundcontent{
+  color: white;
+  margin-left:10px
+}
+
+.finalSuccess{
+  color: white;
+  position: static !important;
+}
+
+.ng-toast__list{
+  position: fixed !important;
+  top: 10px !important;
 }

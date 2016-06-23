@@ -1,0 +1,45 @@
+<main>
+  <form class="formContainer" ng-submit="validateSelfie()">
+      <div>
+        <h1 class="formTitle">Upload your Selfie</h1>
+        <hr/>
+      </div>
+      <div>
+        <center><img id="selfie" style="border-radius:3px;" src="img/selfie.png" onclick="chooseDocument();"> <input style="display:none;" type="file" accept="image/*"  id="selfieInput" onchange="readURL(this,'selfie')"></center>
+      </div>
+      <hr class="small"/>
+      <div class="fundcontent">
+        <div style="padding-left:40px;line-height:30px;" >Guidelines for Selfie</div>
+        <ul type="disc">
+          <li>Your face should cover 80% of the image area.</li>
+          <li>Your eyes should be open.</li>
+          <li>Please do not wear any accessories like headgear or sunglasses.</li>
+          <li>Image should be clear.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" ng-click="submitted= true;" class="btn btn-success">Next</button>
+      </div>
+    <script>
+    function chooseDocument() {
+      if($("#selfieInput").click()){
+
+      }
+    }
+
+    function readURL(input , id) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#'+id)
+          .attr('src', e.target.result)
+          .width(318)
+          .height(189);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    </script>
+
+  </main>

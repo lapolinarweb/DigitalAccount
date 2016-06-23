@@ -1,0 +1,59 @@
+<main>
+<div>
+  <form id="IDUpload" class="formContainer" method="post" ng-class="{'submitted': submitted}" ng-submit="processDocument()" novalidate="true">
+    <div>
+      <h1 class="formTitle">Upload Identity Document</h1>
+      <hr/>
+    </div>
+    <div>
+      <center>
+        <select ng-model="selectedCountry"  id="selectCountry" class="textbox" data-toggle="dropdown" style="background-color: #cde8fb!important" required>
+          <option selected="selected" disabled="disabled">Select Country</option>
+          <option id="u1" value="AUSTRALIA" >AUSTRALIA</option>
+          <option id="u2" value="INDIA">INDIA</option>
+          <option id="u3" value="RUSSIA">RUSSIA</option>
+          <option id="u4" value="SOUTH AFRICA">SOUTH AFRICA</option>
+          <option id="u5" value="UK">UK</option>
+          <option id="u6" value="USA">USA</option>
+        </select>
+      </center>
+      <center><img id="documentFront" style="border-radius:3px;" src="img/documentFront.png" onclick="chooseDocumentFront();"> <input style="display:none;" type="file" accept="image/*"  id="fileInput" onchange="readURL(this,'documentFront')" required="true"></center>
+    </div>
+    <hr class="small"/>
+    <div>
+      <center><img id="documentBack" style="border-radius:3px;" src="img/documentBack.png" onclick="chooseDocumentBack();"> <input style="display:none;" type="file" accept="image/*"  id="fileBackInput" onchange="readURL(this,'documentBack')"></center>
+    </div>
+    <br>
+    <div class="modal-footer">
+      <button type="submit" ng-click="submitted= true;" class="btn btn-primary">Next</button>
+    </div>
+  </form>
+</div>
+<script>
+function chooseDocumentFront() {
+  if($("#fileInput").click()){
+
+  }
+}
+
+function chooseDocumentBack() {
+  if($('#fileBackInput').click()){
+
+  }
+}
+
+function readURL(input , id) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#'+id)
+      .attr('src', e.target.result)
+      .width(318)
+      .height(189);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>
+</main>
